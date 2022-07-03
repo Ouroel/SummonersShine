@@ -1,0 +1,818 @@
+Mods: {
+	SummonersShine: {
+		Config : {
+			Config: Serverside Config
+			ClientConfig: Clientside Config
+			Events: Special Modes
+			General: General Config
+			CompatConfig: Mod Compatibility
+
+			DefaultAbilsSeed: Default Ability Seed
+			CustomDefaultAbils: Manually-Assigned Default Abilities
+			def: Item
+			DefaultAbilityType: Default Ability Type
+			MinionPower0: Minion Power Value 0
+			MinionPower1: Minion Power Value 1
+			BlacklistedProjectiles: Blacklisted Projectiles
+			BlacklistedProjectilesDesc: 
+				'''
+				Forces the projectile to not have default special abilities.
+				Useful for counter minions in the Amulet of Many Minions mod.
+				'''
+			ProjectileSourceItemType: Projectile Source Item Type
+			ProjectileSourceItemTypeDesc:
+				'''
+				Causes the projectile to think it is spawned by a specific item type.
+				Useful for modded minions spawned by means other than the weapon or any minions the weapon summoned.
+				'''
+			ProjectilesIgnoreTracking: Projectiles to ignore Aimbot
+			ProjectilesIgnoreTrackingDesc:
+				'''
+				If the minion already leads their shots, add the projectile to this in order to
+				disable this mod's automatic projectile leading. E.g. Optic Staff from TRAE mod.
+				'''
+			DisableMinionCrits: Disable minion crits
+			DisableMinionCritsDesc:
+				'''
+				Turn this on if another mod already enables prefix/accesory prefix-affected minion crits.
+				Summoner's Shine minion crits stack multiplicatively with all other minion crits. That is to say, the crit-chance is applied after all other RNG crit modifiers (whip-crits, TRAE-crits) have been finalized.
+				'''
+
+			StopPrintingByteFixer: Stop Printing Byte Fixer
+			StopPrintingByteFixerDesc:
+				'''
+				There is a multiplayer bug which causes overflow of 1 byte, preventing Summoner's Shine special minion data from being shared normally without first deleting that byte.
+				That byte represents the number (n) of special tModLoader custom projectile data sent serverside, but is unused. Turn this on if you wish to stop seeing [Byte Fixer] n.
+				'''
+				
+			PrintMinionDeaths: DEBUG - Print Minion Despawns
+			PrintMinionDeathsDesc:	
+				'''
+				If you are having an issue with spontaneous minion despawning, turn this on and give me the logs once it happens.
+				'''
+			DisableCustomMinionSpecialPowers: Disable right-click special abilities
+			DisableCustomMinionSpecialPowersDesc: Disable right-click special abilities, replacing them with random passive special abilities.
+			ItemIgnoresCustomSpecialPower: Right-Click Special Ability-disabled weapons.
+			ItemIgnoresCustomSpecialPowerDesc: Disable this particular weapon's right-click special abilities, replacing them with random passive special abilities.
+			DisableModdedMinionTracking: Disable modded minion relative velocity and aimbot
+			DisableModdedMinionTrackingDesc: 
+				'''
+				Excludes modded minions from having relative velocity and aimbot,
+				as the majority of them do not use the vanilla targeting function and hence will break when this mod is used.
+				'''
+
+			SafeModdedMinionDefaultAbilities: Safe modded minion default special ability
+			SafeModdedMinionDefaultAbilitiesDesc: Forces modded minions to always select a safe default special ability
+
+			ProjectilesForceAimbot: Minions to force Aimbot
+			ProjectilesForceAimbotDesc: Forces a minion to have Aimbot even if "Disable modded minion relative velocity and aimbot" is enabled.
+			StartAttackRange: The attack range to detect enemies
+			SkipIfCannotHit: Whether to skip minions if it is unable to hit it with its body
+
+			DisableDynamicProjectileCacheUpdate: Disable Dynamic Projectile Cache Update
+			DisableDynamicProjectileCacheUpdateDesc: Disables updating the Dynamic Projectile Cache when a projectile is created or destroyed. Enable this option if another mod already does this.
+
+			ProjectileCountedAsMinion: Projectiles Counted as Minions
+			ProjectileCountedAsMinionDesc:
+				'''
+				Forces these projectiles to have Minion-behavior i.e. is updated based on speed.
+				Enable this for stuff like Amulet of Many Minion's Charred Chimera Minion Heads.
+				'''
+
+			ProjectilesNotCountedAsMinion: Projectiles Not Counted as Minions
+			ProjectilesNotCountedAsMinionDesc:
+				'''
+				Forces these projectiles to not have Minion-behavior i.e. don't give this extra updates based on the speed-modifier
+				Enable this for stuff like The Stars Above's Takodachi Tentacles.
+				'''
+				
+			CompressSpecialAbilityDescription: Compress Special Ability Description
+			CompressSpecialAbilityDescriptionDesc:
+				'''
+				Compresses the Special Ability Description to a short one-liner.
+				'''
+			RemoveManaCost: Removes Mana Cost
+			RemoveManaCostDesc:
+				'''
+				This mod replaces Mana Cost with Ability Power. Disable this if you are too lazy to manually flag items to not ignore mana costs.
+				'''
+			ItemsRetainManaCost: Items Retaining Mana Cost
+			ItemsRetainManaCostDesc:
+				'''
+				If the item will be overpowered and broken without a mana cost, add this item to the list.
+				'''
+			BuffSourceItems: Buff Source Items
+			BuffSourceItemsDesc:
+				'''
+				Causes this buff to track the minion power recharge status of all minions spawned from all listed items.
+				'''
+				
+			MinionOutgoingDamage: Minion Outgoing Damage
+			MinionOutgoingDamageDesc:
+				'''
+				Causes minions to deal a percentage of their damage value upon hitting enemies.
+				Also adds innate percentage armor piercing equivalent to the missing damage (i.e. if minions deal 25% damage, they have 75% armor piercing)
+				Does not affect Summoner's Shine-exclusive minions or any mod with official mod compatibility.
+				'''
+				
+			MinionOutgoingDamageMod: Individual Minion Outgoing Damage
+			MinionOutgoingDamageModDesc:
+				'''
+				Overrides the above value.
+				Causes a minion to deal a percentage of their damage value upon hitting enemies.
+				Also adds innate percentage armor piercing equivalent to the missing damage (i.e. if minions deal 25% damage, they have 75% armor piercing)
+				'''
+			BloodtaintMode: Bloodtaint Mode
+			BloodtaintModeDesc:
+				'''
+				The blood moon rises red. Your blood is tainted by the vile moon, subverting the link to your minions.
+				Your strength fades away, your minions trudge on, lethargic under the eldritch glare of the Lunar Eye.
+				Yet you have naught but a whip. With every strike, your minions are rallied. With every laceration of your enemies' flesh, your minions are rejuvenated.
+				How far can you go while cursed the taint of the bloody moon?
+
+				All custom special abilities disabled
+				All other classes disabled
+				Minions are 4x slower
+				Minions have an outgoing damage modifier of 50%
+				Whipping an enemy has a high chance to cause minions to instantly attack
+				Daytime is much shorter unless facing a boss or event
+				Start with Leather Whip, Vampire Frog Staff, and 20 Crimson Torches
+
+				Best played with Summoner's Shine as the only mod enabled. Does not give modded minions instastrike - do it yourself at your own risk!
+				'''
+				
+			Projectile: Projectile
+			Buff: Buff
+			BuffSourceItems: Buff Source Items
+			ItemSource: Item Source
+			OutgoingDamage: Outgoing Damage
+		}
+
+		Prefix: {
+			Divine: Divine
+			Remphanic: Remphanic
+			Bloodbound: Bloodbound
+			Shining: Shining
+			Righteous: Righteous
+			Devoted: Devoted
+			Fanatical: Fanatical
+			Initiated: Initiated
+			Heretical: Heretical
+			Unholy: Unholy
+			Lunatic: Lunatic
+			Benzona: Benzona
+		}
+
+		Summon: {
+			RequiresEnergy_end:
+				'''
+				requires {0} seconds to charge and recharge
+				'''
+			RequiresEnergy:
+				'''
+				Special Ability {$Mods.SummonersShine.Summon.RequiresEnergy_end}
+				'''
+			CostsEnergy:
+				'''
+
+				Special costs 20 energy
+				'''
+			CostsEnergyPerSecond:
+				'''
+
+				Special costs {2} energy per second
+				'''
+			EnergyRestoreRate: ""
+			Duration:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} Special ability lasts {1} seconds
+				'''
+			RightClickSpecial: "<right> special"
+			RightclickSpecialUncompressed: "Press <right>"
+		}
+		
+		SummonSpecialDefault: {
+			MinionPower: "{0}% ability power"
+			NotImplemented: This modded summon weapon does not have a {$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} special ability yet!
+			Multishot:
+				'''
+				Summoned minions have a {1}% chance to shoot projectiles at multiple enemies
+				'''
+			Reaction:
+				'''
+				Whipping an enemy sends summoned minions into a short rage, increasing attack speed by {1}%
+				'''
+			ReactionWhipless:
+				'''
+				Right-Clicking or Whipping sends summoned minions into a short rage
+				Duration has {1}% uptime
+				'''
+			Instastrike:
+				'''
+				Whipping an enemy has a {1}% chance to cause summoned minions to immediately attack your target!
+				'''
+			Uplift:
+				'''
+				This minion can be mounted or grappled.
+				Gain a {1}% movement speed bonus for {2} seconds after riding or grappling the minion
+				'''
+			Subversion:
+				'''
+				Damage dealt by minions of this type tags an enemy and causes other tagged enemies to take {1}% damage
+				'''
+			Vengeance:
+				'''
+				After you take damage, minion damage charges your whip by {1}% of damage dealt for your next attack
+				'''
+
+			Kvetch:
+				'''
+				Whipping an enemy modifies your minions' attack speed by {1}%
+				'''
+			Reach:
+				'''
+				Every attack has a {1}% chance to gain extra attack range
+				'''
+			Lacerate:
+				'''
+				Your minions ignore {1}% of whipped enemies' armor!
+				'''
+		}
+		
+		SummonSpecialDefaultCompressed: {
+			NotImplemented: No Special Ability
+			Multishot:
+				'''
+				{1}% multishot chance
+				'''
+			Reaction:
+				'''
+				{1}% whip reaction attack speed buff
+				'''
+			ReactionWhipless:
+				'''
+				{1}% activatable attack speed buff uptime
+				'''
+			Instastrike:
+				'''
+				{1}% instastrike per whip
+				'''
+			Uplift:
+				'''
+				This minion can be mounted or grappled.
+				Gain a {1}% movement speed bonus for {2} seconds after riding or grappling the minion
+				'''
+			Subversion:
+				'''
+				Damage dealt by minions of this type tags an enemy and causes other tagged enemies to take {1}% damage
+				'''
+			Vengeance:
+				'''
+				After you take damage, minion damage charges your whip by {1}% of damage dealt for your next attack
+				'''
+
+			Kvetch:
+				'''
+				{1}% summon tag attack speed
+				'''
+			Reach:
+				'''
+				{1}% extra attack range chance
+				'''
+			Lacerate:
+				'''
+				{1}% summon tag armor negation
+				'''
+		}
+
+		SummonSpecial: {
+			AbigailsFlower:
+				'''
+				Each summon adds a Mourning Glory to keep Abigail company
+				Press {$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your Mourning Glories to periodically summon damaging wisps!
+				Mourning Glories can target enemies within {1} blocks
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			BabyBirdStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to call a finch to lift you up!
+				When being lifted up, you move {1}% faster per bird
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			SlimeStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to launch a bouncy slime which bounces both allies and enemies!
+				The bouncy slime will speay a gout of slowing slime around itself when it lands
+				{$Mods.SummonersShine.Summon.Duration}
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			FlinxStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to puff up your Flinxes, sending them careening into an unpredictable frenzy!
+				Attacks during frenzy has {1}x knockback
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			VampireFrogStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to temporary inundate you in sanguine rejuvenation!
+				Special lifesteals for {1}% of Vampire Frog damage
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			HornetStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause hornet stings to fester into a cyst, which periodically spawns bees!
+				Cysts last for {1} seconds
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			ImpStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your imps to focus a target with exploding fireballs!
+				Exploding Fireball explosions have {1} blocks radius
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			SpiderStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your spiders to grapple to a target, slowing it and attacking it relentlessly!
+				{$Mods.SummonersShine.Summon.Duration}
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			PirateStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to call upon the Dastardly Doubloon, captained by the legendary Pirate Queen!
+				Just make sure not to stomp on her ship...or squeeze it too hard with a grapple...
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} again to activate or recharge the Dastardly Doubloon's shield!
+				Recharges the shield for {1} health
+				The Dastardly Doubloon's Energy Shield {$Mods.SummonersShine.Summon.RequiresEnergy_end}
+				'''
+			SanguineStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your bats' attacks to have a {1}% chance to summon a swarm of batlings!
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			Smolstar:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your Enchanted Daggers to fragment into shards upon hit!
+				Shards lacerates enemies for {1}% of their armor with every hit!
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			OpticStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to enable lock-on mode, causing Spazmaminis to shoot Cursed Fireballs!
+				Retaniminis aiming at other targets have a {1}% chance to follow-up on Cursed Fireball hits!
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			PygmyStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to summon a floating island with a Tree of Life!
+				Trees of Life periodically spawns Golden Fruits which heal you for {1} health!
+				Pygmies will automatically teleport to the floating island closest to their target
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			DeadlySphereStaff:
+				'''
+				When a Deadly Sphere hits an enemy or projectile, it may launch a Deadly Instrument at the strongest enemy
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your Deadly Spheres to additionally launch Deadly Instruments at all nearby enemies!
+				Deadly Instruments deal {1}% of the Deadly Sphere's damage
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			RavenStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to summon a Spooky Pillar
+				Spooky Pillars cast a {1} block radius Shadowraze on enemies within a specific range
+				Different-distance Shadowrazes have separate cooldowns
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			TempestStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to sweep yourself away in a Tempest Wind!
+				Tempest Wind has a travel time of {1} seconds
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			XenoStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to summon a Martian Shield Generator!
+				Hostile projectiles in contact with the Martian Shield creates a damaging Chain Lightning which empowers your saucers!
+				Martian Shield Chain Lightning has a {1} blocks chain distance
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			StardustCellStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cultivate a cellular clone of you to whip the enemy!{$Mods.SummonersShine.Summon.Duration}
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} a clone to teleport to it{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			StardustDragonStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to temporarily fire a Stardust Fireball with each swing of your whip!
+				Stardust Fireball deals {0}% of the Stardust Dragon's damage{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			EmpressBlade: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to visit the Empress's Wrath onto {0} enemies!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			StormTigerStaff: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to immediately perform a pounce attack, dealing {0}% damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			BlandWhip: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to tag enemies for {0} damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			ThornWhip: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to swing in a wider arc, knocking back for {0}% force!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			BoneWhip: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause minions to shatter hit enemies, spraying bones which deals {0} damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			FireWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to inflict multiple enemies with an explosive affliction!
+				Next minion attack explodes for {0}{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			CoolWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to inflict a deep chill within an enemy, causing it to contract hypothermia!
+				Hypothermia deals {0}% of minion attack damage{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			SwordWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to bless yourself with a shield which absorbs a single hit!
+				While active, the shield increases your summon damage output by {0}%{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			MaceWhip: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to bash hit enemies, causing your minions to deal {0}% damage on their hits!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			ScytheWhip: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to increase your attack speed by {0}%!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			RainbowWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to increase your attack speed by {0}%!
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} also causes minion attacks to bedazzle tagged enemies in a prismatic shine for {1}% damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			HoundiusShootius:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to summon the Ancient Guardian!
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} again to conjure a Nightmare Rampart at a location!
+				When the Ancient Guardian rams into a Nightmare Rampart, rain down debris for {1} seconds
+				Nightmare Rampart conjuration {$Mods.SummonersShine.Summon.RequiresEnergy_end}
+				'''
+			QueenSpiderStaff:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} for your queen spiders to shoot out a venom spray with every shot!
+				Venom cloud has {1}% velocity
+				{$Mods.SummonersShine.Summon.RequiresEnergy}
+				'''
+			StaffoftheFrostHydra: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause the Frost Hydra to teleport to reach its enemies!{$Mods.SummonersShine.Summon.Duration}{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			MoonlordTurretStaff: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to summon a Phantasmal Eye at your location!{$Mods.SummonersShine.Summon.Duration}{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			RainbowCrystalStaff: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to induce a celebratory assault on the targeted enemy!{$Mods.SummonersShine.Summon.Duration}{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2BallistraTowerT1Popper: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to increase the Ballista's attack speed by {0}%!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2BallistraTowerT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2BallistraTowerT1Popper}"
+			DD2BallistraTowerT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2BallistraTowerT1Popper}"
+			DD2FlameburstTowerT1Popper: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to increase the Flameburst Sentry's attack damage by {0}%!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2FlameburstTowerT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2FlameburstTowerT1Popper}"
+			DD2FlameburstTowerT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2FlameburstTowerT1Popper}"
+			DD2LightningAuraT1Popper: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause the Lightning Aura to deal {0} extra damage per enemy armor point!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2LightningAuraT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2LightningAuraT1Popper}"
+			DD2LightningAuraT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2LightningAuraT1Popper}"
+			DD2ExplosiveTrapT1Popper:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause Explosive Traps to inflict an explosive debuff!
+				Next minion hit deals {0}% damage{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			DD2ExplosiveTrapT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2ExplosiveTrapT1Popper}"
+			DD2ExplosiveTrapT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2ExplosiveTrapT1Popper}"
+		}
+
+		SummonSpecialCompressed: {
+			AbigailsFlower:
+				'''
+				{1} blocks {$Mods.SummonersShine.Summon.RightClickSpecial} attack range
+				'''
+			BabyBirdStaff:
+				'''
+				{1}% extra speed during {$Mods.SummonersShine.Summon.RightClickSpecial}
+				'''
+			SlimeStaff:
+				'''
+				{1} {$Mods.SummonersShine.Summon.RightClickSpecial} springslow-slime duration
+				'''
+			FlinxStaff:
+				'''
+				{1}x {$Mods.SummonersShine.Summon.RightClickSpecial} knockback
+				'''
+			VampireFrogStaff:
+				'''
+				{1}% {$Mods.SummonersShine.Summon.RightClickSpecial} lifesteal
+				'''
+			HornetStaff:
+				'''
+				{1} second {$Mods.SummonersShine.Summon.RightClickSpecial} cyst duration
+				'''
+			ImpStaff:
+				'''
+				{1} Blocks {$Mods.SummonersShine.Summon.RightClickSpecial} explosion radius
+				'''
+			SpiderStaff:
+				'''
+				{1} {$Mods.SummonersShine.Summon.RightClickSpecial} latch duration
+				'''
+			PirateStaff:
+				'''
+				{1} {$Mods.SummonersShine.Summon.RightClickSpecial} ship shield health recharge
+				'''
+			SanguineStaff:
+				'''
+				{1}% chance for batling swarm during {$Mods.SummonersShine.Summon.RightClickSpecial}
+				'''
+			Smolstar:
+				'''
+				{1}% {$Mods.SummonersShine.Summon.RightClickSpecial} shard armor laceration
+				'''
+			OpticStaff:
+				'''
+				{1}% {$Mods.SummonersShine.Summon.RightClickSpecial} cursed fireball followup
+				'''
+			PygmyStaff:
+				'''
+				{1} {$Mods.SummonersShine.Summon.RightClickSpecial} golden fruit heal
+				'''
+			DeadlySphereStaff:
+				'''
+				{1}% {$Mods.SummonersShine.Summon.RightClickSpecial} deadly instrument damage
+				'''
+			RavenStaff:
+				'''
+				{1} blocks {$Mods.SummonersShine.Summon.RightClickSpecial} spooky pillar shadowraze radius
+				'''
+			TempestStaff:
+				'''
+				{1} {$Mods.SummonersShine.Summon.RightClickSpecial} travel time
+				'''
+			XenoStaff:
+				'''
+				{1} blocks {$Mods.SummonersShine.Summon.RightClickSpecial} shield chain lightning range
+				'''
+			StardustCellStaff:
+				'''
+				null
+				'''
+			StardustDragonStaff:
+				'''
+				null
+				'''
+			EmpressBlade: "{$Mods.SummonersShine.Summon.RightClickSpecial} to visit the Empress's Wrath onto {0} enemies!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			StormTigerStaff: "{$Mods.SummonersShine.Summon.RightClickSpecial} to immediately perform a pounce attack, dealing {0}% damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			BlandWhip: "{$Mods.SummonersShine.Summon.RightClickSpecial} to tag enemies for {0} damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			ThornWhip: "{$Mods.SummonersShine.Summon.RightClickSpecial} to swing in a wider arc, knocking back for {0}% force!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			BoneWhip: "{$Mods.SummonersShine.Summon.RightClickSpecial} to cause minions to shatter hit enemies, spraying bones which deals {0} damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			FireWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightClickSpecial} to inflict multiple enemies with an explosive affliction!
+				Next minion attack explodes for {0}{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			CoolWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightClickSpecial} to inflict a deep chill within an enemy, causing it to contract hypothermia!
+				Hypothermia deals {0}% of minion attack damage{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			SwordWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightClickSpecial} to bless yourself with a shield which absorbs a single hit!
+				While active, the shield increases your summon damage output by {0}%{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			MaceWhip: "{$Mods.SummonersShine.Summon.RightClickSpecial} to bash hit enemies, causing your minions to deal {0}% damage on their hits!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			ScytheWhip: "{$Mods.SummonersShine.Summon.RightClickSpecial} to increase your attack speed by {0}%!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			RainbowWhip:
+				'''
+				{$Mods.SummonersShine.Summon.RightClickSpecial} to increase your attack speed by {0}%!
+				{$Mods.SummonersShine.Summon.RightClickSpecial} also causes minion attacks to bedazzle tagged enemies in a prismatic shine for {1}% damage!{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			HoundiusShootius:
+				'''
+				{1} second {$Mods.SummonersShine.Summon.RightClickSpecial} debris rain duration
+				'''
+			QueenSpiderStaff:
+				'''
+				{1}% {$Mods.SummonersShine.Summon.RightClickSpecial} venom spray velocity
+				'''
+			StaffoftheFrostHydra: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause the Frost Hydra to teleport to reach its enemies!{$Mods.SummonersShine.Summon.Duration}{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			MoonlordTurretStaff: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to summon a Phantasmal Eye at your location!{$Mods.SummonersShine.Summon.Duration}{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			RainbowCrystalStaff: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to induce a celebratory assault on the targeted enemy!{$Mods.SummonersShine.Summon.Duration}{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2BallistraTowerT1Popper: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to increase the Ballista's attack speed by {0}%!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2BallistraTowerT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2BallistraTowerT1Popper}"
+			DD2BallistraTowerT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2BallistraTowerT1Popper}"
+			DD2FlameburstTowerT1Popper: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to increase the Flameburst Sentry's attack damage by {0}%!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2FlameburstTowerT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2FlameburstTowerT1Popper}"
+			DD2FlameburstTowerT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2FlameburstTowerT1Popper}"
+			DD2LightningAuraT1Popper: "{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause the Lightning Aura to deal {0} extra damage per enemy armor point!{$Mods.SummonersShine.Summon.EnergyRestoreRate}"
+			DD2LightningAuraT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2LightningAuraT1Popper}"
+			DD2LightningAuraT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2LightningAuraT1Popper}"
+			DD2ExplosiveTrapT1Popper:
+				'''
+				{$Mods.SummonersShine.Summon.RightclickSpecialUncompressed} to cause Explosive Traps to inflict an explosive debuff!
+				Next minion hit deals {0}% damage{$Mods.SummonersShine.Summon.EnergyRestoreRate}
+				'''
+			DD2ExplosiveTrapT2Popper: "{$Mods.SummonersShine.SummonSpecial.DD2ExplosiveTrapT1Popper}"
+			DD2ExplosiveTrapT3Popper: "{$Mods.SummonersShine.SummonSpecial.DD2ExplosiveTrapT1Popper}"
+		}
+
+		ProjectileName: {
+			DeadlyInstrument: Deadly Instrument
+			GoldenFruit: Golden Fruit
+			BatlingOfLight: Vampire Bat Spawn
+			ChiunShard: Armor Subversion
+			DastardlyDoubloon: Mini Cannonball
+			HornetCyst: Bloodbee Infestation
+			ImpSuperFireball: Remphanic Rage
+			SpazmaminiFireball: Mini Cursed Fireball
+			SpringSlime: Bouncy Goop
+			AGDebris: Ruins Rubble
+			AncientGuardian: Ancient Guardian
+			MourningGloryBolt: Abigail's Tragedy
+			NightmareFuel: Corruption from Them
+			SlimeGoop: Slimy Goop
+			SpiderHiverVenom: Ovipositor Infection
+			NevermorePillar: Shadow Fiend
+		}
+
+		ItemName: {
+			CorrodedShield_Broken: Corroded Shield
+		}
+
+		ItemTooltip: {
+			CorrodedShield_Broken: Sentries can be placed in the air
+		}
+		
+		BuffName: {
+			HoundiusShootiusBuff: Houndius Shootius
+			QueenSpiderBuff: Queen Spider
+			FrostHydraBuff: Frost Hydra
+			MoonlordTurretBuff: Lunar Portal
+			StardustTurretBuff: Stardust Portal
+			RainbowCrystalBuff: Rainbow Crystal
+			HuntressBuff: Huntress' Traps
+			SquireBuff: Squire's Towers
+			ApprenticeBuff: Apprentice's Constructs
+			MonkBuff: Monk's Auras
+
+			Bloodtaint: Blood Taint
+		}
+
+		BuffDescription: {
+			HoundiusShootiusBuff: The eye of the laser god stares down your enemies
+			QueenSpiderBuff: The queen spider will fight for you
+			FrostHydraBuff: The frost hydra will fight for you
+			MoonlordTurretBuff: The lunar portal will incinerate your enemies
+			StardustTurretBuff: The stardust portal will incinerate your enemies
+			RainbowCrystalBuff: The rainbow crystal will bedazzle your enemies
+			HuntressBuff: The Huntress' traps will defend you
+			SquireBuff: The Squire's towers will defend you
+			ApprenticeBuff: The Apprentice's constructs will defend you
+			MonkBuff: The Monk's auras will defend you
+
+			Bloodtaint: Your blood is tainted. Minion speed is greatly reduced!
+		}
+
+		NPCDialog: {
+			Pirate_Queenie: {
+				Pirate_Queenie_1: "T'was a stormy day once, when me eye caught glint, of a Pirate Queen most diminutive in size and stature."
+				Pirate_Queenie_2: "Thou' her figure fits within the palm of me hand, her temper....that's another story to talk 'bout."
+				Pirate_Queenie_3: "She orders 'round a pack of miscreants, pirates, though only reachin' to my waist, still tower'd over her..."
+				Pirate_Queenie_4: "Nary a single one dares to overstep their bounds, lest she drop-kicks them into her foes."
+				Pirate_Queenie_5: "She's be a fine-lookin' lass, an' her shotgun's even finer."
+				Pirate_Queenie_6: "Tha' terror of the seas, she was known. Not even royal navies dare cross 'er, lest she sunk their fleet with a hail o' bullets."
+				Pirate_Queenie_7: "A bounty 'f 6 g'rillion doubloons, t'was offered for her capture..."
+				Pirate_Queenie_8: "Thou' she calls 'erself a 'defender of her kin', not some mere lowlife."
+				Pirate_Queenie_9: "Tiny folk they sure are. Judging by 'er, pr'bably as explosive as a powderkeg."
+				Pirate_Queenie_10: "She whisked me 'way to 'er island once. Saw a little bit, passed out, 'nd ended up here."
+				Pirate_Queenie_11: "T'was the last time I saw her, for she dis'ppeared into the night."
+				Pirate_Queenie_12: "Still 'as a special place within me heart for her little smile, even to this day."
+				Pirate_Queenie_13: "She once left a lil' trinket for me - a staff of the Pirates, which, once rung, would summon 'er."
+			}
+
+			Pirate_Queenie_Found_Male: {
+				Pirate_Queenie_Found_1: "My dear, my love, my Queen, it's been too long since I last saw you."
+				Pirate_Queenie_Found_2: "Oh, how I do miss you dearly. Since that fateful day..."
+				Pirate_Queenie_Found_3: "You despise me still, then? I presume you found a new king"
+				Pirate_Queenie_Found_4: "Guess you will forever be far beyond my reach..."
+			}
+			
+			Pirate_Queenie_Found_Female: {
+				Pirate_Queenie_Found_1: "My dear, my love, my Queen, it's been too long since I last saw you."
+				Pirate_Queenie_Found_2: "Oh, how I do miss you dearly. Since that fateful day..."
+				Pirate_Queenie_Found_3: "You found someone stronger, then? Someone strong enough to defeat the leviathan?"
+				Pirate_Queenie_Found_4: "I suppose you two will sail to the moon, where you will fight the last leviathan and make biscuits of his bloody corpse?"
+				Pirate_Queenie_Found_5: "Have a jolly good time, then!"
+			}
+
+			Pirate_Queenie_Gone: {
+				Pirate_Queenie_Gone_1: "Oh, she's gone again. Whisked into the wind, as though she don't want t' see more of me."
+			}
+
+			WitchDoctor_AbigailsFlower: {
+				WitchDoctor_AbigailsFlower: "No heart can cure her. No life can bring her back. It is only in the Glory of Mourning which is Constant."
+			}
+
+			WitchDoctor_BabyBirdStaff: {
+				WitchDoctor_BabyBirdStaff_1: "A finch lifts you up. Your weight pulls them down."
+			}
+
+			WitchDoctor_SlimeStaff: {
+				WitchDoctor_SlimeStaff: "The slimes bounce on the ground. Your feet bounce on their slime."
+				WitchDoctor_SlimeStaff_2: "The slime lifts you up. The slime pulls them down."
+			}
+
+			WitchDoctor_FlinxStaff: {
+				WitchDoctor_FlinxStaff: "A flinx is happy when bouncy. A flinx is bouncy when angry."
+			}
+
+			WitchDoctor_VampireFrogStaff: {
+				WitchDoctor_VampireFrogStaff: "To command vampires, you must first become a vampire."
+				WitchDoctor_VampireFrogStaff_2: "They are the vampires of their enemies. You are the vampire of their work."
+			}
+
+			WitchDoctor_HornetStaff: {
+				WitchDoctor_HornetStaff: "The bees of the jungle attract hornets, seeking their delicious honey, before burrowing beneath their skin and breeding within."
+				WitchDoctor_HornetStaff_2: "When a hornet is threatened, it releases the parasites in their swollen ovipositor, continuing the cycle of infestation."
+			}
+
+			WitchDoctor_ImpStaff: {
+				WitchDoctor_ImpStaff: "Those laying beneath the surface of the earth deceive you. Only a being with a strong enough will can unleash their true potential."
+			}
+			
+			WitchDoctor_SpiderStaff: {
+				WitchDoctor_SpiderStaff: "The spiders imprint on the first thing they see. They see you as their mother."
+			}
+
+			WitchDoctor_Smolstar: {
+				WitchDoctor_Smolstar: "A retributive power lies dormant within the enchanted daggers. Your enemies' pain will become their pain."
+				WitchDoctor_Smolstar_2: "The pain from the daggers is your enemies' pain. The strength reduced by the defenses is their strength."
+			}
+
+			WitchDoctor_SanguineStaff: {
+				WitchDoctor_SanguineStaff: "The Sanguine Bats' brood is voracious, feasting on everything they can find."
+			}
+
+			WitchDoctor_PygmyStaff: {
+				WitchDoctor_PygmyStaff: "There is yet another within the jungle, similar yet different to my kind."
+				WitchDoctor_PygmyStaff_2: "They wear the Life-Leaf and Life-Bark to signify their connection to the Life-Tree."
+				WitchDoctor_PygmyStaff_3: "In times of great need, their Ancient Life-Giver manifests itself from within the mist."
+				WitchDoctor_PygmyStaff_4: "They are one with the Life-Tree. If the Life-Tree calls them, they will answer."
+			}
+
+			WitchDoctor_DeadlySphereStaff: {
+				WitchDoctor_DeadlySphereStaff: "The Tall Man's creations are dark indeed. Their deathly power is called from each strike."
+				WitchDoctor_DeadlySphereStaff_2: "The greatest life flees from the greatest death. The greatest death seeks the greatest life."
+				WitchDoctor_DeadlySphereStaff_3: "As death waxes, life wanes, yet as life wanes, death wanes."
+			}
+
+			WitchDoctor_RavenStaff: {
+				WitchDoctor_RavenStaff: "Soul-guzzler! Shadowraze-skipper! Brainless flailing-devil! Quoth the Raven \"Nevermore\"."
+				WitchDoctor_RavenStaff_2: "Demonic Gold-Farmer, perpetually absent! Quoth the Raven \"Nevermore\"."
+				WitchDoctor_RavenStaff_3: "Consumer of resources! Moonlighting professional! You will get your just reward! Quoth the Raven \"Nevermore\"."
+			}
+			
+			WitchDoctor_TempestStaff: {
+				WitchDoctor_TempestStaff: "The Sharknadoes carry the storm of the high seas with them. You only need channel their power through the conduit of your staff."
+			}
+
+			WitchDoctor_XenoStaff: {
+				WitchDoctor_XenoStaff: "Your enemies charge your shield. Your shield charge their demise."
+				WitchDoctor_XenoStaff2: "All energy is interchangeable. Their strength charges your saucer's speed."
+			}
+
+			WitchDoctor_HoundiusShootius: {
+				WitchDoctor_HoundiusShootius: "The Eye of the Laser-God rests upon the Horn of the Ancient Guardian."
+				WitchDoctor_HoundiusShootius_2: "Very long has this one slept. An eternal slumber throughout."
+				WitchDoctor_HoundiusShootius_3: "Death is never permanent, in the Constant. Nightmares are the only Constant."
+			}
+
+			WitchDoctor_QueenSpiderStaff: {
+				WitchDoctor_QueenSpiderStaff: "From their life, suffering. From their suffering, life."
+				WitchDoctor_QueenSpiderStaff_2: "From their life, a poisonous death. From their deathly poison, life."
+			}
+
+			Steampunker_OpticStaff: {
+				Steampunker_OpticStaff: "Hey, mate, if you kill that big mechanical pair of eyes, I can help you build your own personal pair!"
+				Steampunker_OpticStaff_2: "Would be a tad smaller, though. Otherwise, it'll be too big!"
+				Steampunker_OpticStaff_3: "Go git those eyes, fella!"
+			}
+
+			Mechanic_OpticStaff: {
+				Mechanic_OpticStaff: "Damn those cultists! Forcing me to build such big eyes..."
+				Mechanic_OpticStaff_2: "I'm going to need their special souls if I'm going to build a smaller pair."
+			}
+
+			Steampunker_TwinsDefeated: {
+				Steampunker_TwinsDefeated: "Haha, you sure showed 'em Twins! Now show me the goods!"
+				Steampunker_TwinsDefeated_2: "Yeah, yeah. Gonna need an anvil for that, though. Myth or Oric should do just fine"
+			}
+
+			Mechanic_TwinsDefeated: {
+				Mechanic_TwinsDefeated: "Thanks again! Now, how about I show you how to make some mechanical eyes for yourself?"
+				Mechanic_TwinsDefeated_2: "Just bring these souls to the anvil! I'll show you the ropes."
+			}
+
+			Steampunker_OpticStaffFound: {
+				Steampunker_OpticStaffFound: "Heh, my babies are lookin' fine!"
+				Steampunker_OpticStaffFound_2: "There's a little button on the staff. Makes it spew fire. Pew pew!"
+			}
+
+			Mechanic_OpticStaffFound: {
+				Mechanic_OpticStaffFound: "There we go! Wasn't so bad, was it?"
+				Mechanic_OpticStaffFound_2: "About the Cursed Flamethrower, well, it needs time to charge."
+			}
+
+			Princess_BladeStaff: {
+				Princess_BladeStaff: "My rabbi gave me one of these on my Bat Mitzvah!"
+				Princess_BladeStaff_2: "She told me to use it if anything went wrong. It worked out well for me!"
+				Princess_BladeStaff_2: "I...err...kinda lost it though. Oops!"
+			}
+
+			Guide_Help: "When your minions are ready, you can press <right> with your minion's staff to use their special ability. When your minions are not ready, pressing <right> will merely select a target for them."
+		}
+	}
+}
