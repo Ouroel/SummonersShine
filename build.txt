@@ -1,0 +1,9 @@
+displayName = Summoner's Shine
+author = Yreorel
+version = 0.1000000079.5.2
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = false
+hideCode = true
+hideResources = true
+includeSource = false
+includePDB = false

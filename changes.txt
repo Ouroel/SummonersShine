@@ -1,0 +1,78 @@
+Modifiers
+
+Damage/KB/Usetime/Crit/AP/Valuemult
+
+Divine(1.15f, 1.15f, 1.1f, 5, 1.1f, 1.2f)
+Remphanic(1.05f, 1.05f, 1f, 0, 1.15f, 1.2f)
+Bloodbound(1.10f, 1f, 1f, 0, 1.1f, 1.15f)
+Shining(1.1f, 0.9f, 1.1f, 0, 1.1f, 1.1f)
+Righteous(1.1f, 1f, 1.1f, 0, 0.9f, 1f)
+Devoted(1.1f, 1f, 0.9f, 0, 1.1f, 1f)
+Fanatical(1.15f, 1f, 1.1f, 0, 0.85f, 1f)
+Initiated(1f, 1f, 1f, 0, 1.15f, 1f)
+
+Heretical(1.1f, 0.85f, 1f, 0, 1f, 1f)
+Unholy(1f, 0.9f, 1f, 0, 0.9f, 1f)
+Lunatic(0.90f, 0.90f, 1f, 0, 1f, 1f)
+Benzona(0.85f, 0.85f, 1f, 0, 0.85f, 1f)
+
+Minion AI Changes
+
+General - Minions now add player MS when returning
+General - Ranged minions add player MS when moving, melee minions add target MS when moving. Minions have acceleration velocity.
+
+General - Minion update frames are duped/removed based on speed, minion velocity is increased/reduced according to speed. (Summon weapon speed modifies minion simulation speed and invulnerability frames)
+General - Minions can crit
+General - Minions all have an ALT ability, which has a cooldown, and scales with minion AP
+
+Todo - Add hooks for detecting minion state - DONE
+Todo - Add animations for minion summoning
+-Finch * X
+-Slime * X
+-Flinx * X
+-Frog * X
+-Hornet * X
+-Imp * X
+-Spider * X
+-Pirate * X
+-Blade * X
+-Sanguine * X
+-Tempest * X
+-Optic * X
+-Pygmy * X
+-Deadly Sphere * X
+-Xeno * X
+-Raven * X
+-Cell *
+-Dragon *
+-Terraprisma *
+-Desert Tiger *
+
+-Houndius Shootius * X
+-Queen Spider * X
+-Frost Hydra *
+-Lunar Portal *
+-Rainbow Crystal *
+
+-Ballista *
+-Flameburst Tower *
+-Explosive Trap *
+-Lightning Aura *
+
+Todo - Add right-click effects for all minions
+-When a minion regains all energy the player will emote *
+-Todo - Make energy bar for current weapon *
+
+Notes
+
+Priority right-click effects
+
+Balance changes
+
+Desert Tiger can now crit!
+
+Todo - sync bird, pirate specials properly.
+
+Other
+
+Added Bloodtaint Mode

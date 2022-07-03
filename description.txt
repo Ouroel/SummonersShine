@@ -1,0 +1,17 @@
+Gives Summoner the level of polish they deserve!
+
+This mod adds things which the Summoner class really should have at launch. All minions can now crit and have their speed modified by prefixes, and Summon weapons have a brand-new set of unique prefixes (no more sharing prefixes with Magic and Melee weapons!)
+
+While most minions are still not that much better at tracking agile enemies, every single one of them is very, very good at matching your own speed! That means you can now run away in a singular direction without worrying about your minions not being able to catch up!
+
+Every minion now also has their own spawn and despawn animation! When summoning a minion, you may now expect a puff of smoke, or the glow of a Sealing Sigil, or a mess of Raven feathers! Similarly, you can expect a burst of flame, or a dessicated cocoon, or an array of Stardust powder, when a minion disappears!
+
+Now includes Bloodtaint Mode - a Config-enabled feature! Test your whip-stacking skills in the Blood-tainted world, for your minions are lethargic and will only wake to the crack of a whip!
+
+Incomplete Features:
+
+Every summon weapon, including whips, now have a special ability they can use by right-clicking. The stats of their right-click ability can be modified by summoner-specific prefixes with Ability Power modifications.
+
+Note that summon weapons without right-click special abilities have passives. Read the description of your summon weapon!
+
+Discord: https://discord.gg/23xap7rSr3
